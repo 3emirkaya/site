@@ -3,36 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Site</title>
+  <title>Emir Kaya | Kişisel Site</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <nav class="navbar">
-      <h1>My Blog</h1>
-      <div class="nav-right">
-        <input type="text" id="searchInput" placeholder="Yazı ara...">
-        <button id="newPostBtn">Yeni Yazı</button>
+      <div class="logo">
+        <span class="logo-mark">E</span>
+        <span class="logo-text">Emir Kaya</span>
       </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımda</a></li>
+        <li><a href="#projects">Projeler</a></li>
+        <li><a href="#blog">Yazılarım</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <div class="filters">
-      <select id="sortBy">
-        <option value="newest">En Yeni</option>
-        <option value="oldest">En Eski</option>
-        <option value="titleAsc">Başlığa Göre (A-Z)</option>
-      </select>
-    </div>
-    <div id="posts" class="posts-grid"></div>
-    <div class="pagination">
-      <button id="prevBtn" class="pagination-btn">← Önceki</button>
-      <span id="pageInfo">Sayfa 1</span>
-      <button id="nextBtn" class="pagination-btn">Sonraki →</button>
-    </div>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero container">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Merhaba, ben Emir 👋</p>
+        <h1>Kişisel blogum ve projelerimle internetteki küçük alanım.</h1>
+        <p class="hero-subtitle">
+          Frontend ağırlıklı, modern web arayüzleri geliştirmeyi seviyorum.
+          Bu sayfada hem kendimi kısaca tanıtıyorum hem de öğrendiklerimi
+          blog yazılarıyla paylaşıyorum.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Projelerime göz at</a>
+          <a href="#blog" class="btn btn-secondary">Son yazıları oku</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-avatar">E</div>
+        <h2>Web Geliştirici</h2>
+        <p>HTML, CSS, JavaScript ile arayüz geliştiriyorum. Zamanla bu kartı gerçek
+          bilgiler ve linklerle doldurabilirsin.</p>
+        <ul class="hero-tags">
+          <li>Frontend</li>
+          <li>Responsive Tasarım</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2 class="section-title">Hakkımda</h2>
+      <p class="section-description">
+        Buraya kendinle ilgili birkaç paragraf yazabilirsin. Şimdilik örnek bir yazı bıraktım:
+        yazılım öğrenirken yaptığın projeleri, ilgi alanlarını ve gelecekte hangi alanda
+        uzmanlaşmak istediğini anlat.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section-title">Projeler</h2>
+      <p class="section-description">
+        Aşağıda portföyüne ekleyebileceğin örnek proje kartları var. İstersen
+        projelerinin linklerini (GitHub, canlı demo) buraya ekleyebilirsin.
+      </p>
+      <div class="cards-grid">
+        <article class="info-card">
+          <h3>Blog Uygulaması</h3>
+          <p>Node.js backend ve saf HTML/CSS/JS frontend ile hazırlanmış basit bir blog sistemi.
+            Yazı ekleme, silme, arama ve sayfalama özelliklerine sahip.</p>
+        </article>
+        <article class="info-card">
+          <h3>Kişisel Site</h3>
+          <p>Şu anda görüntülediğin bu sayfayı deponun frontend kısmını kullanarak
+            tasarladın. Railway üzerinde yayınlanıyor.</p>
+        </article>
+        <article class="info-card">
+          <h3>Gelecek Projeler</h3>
+          <p>Yeni şeyler öğrendikçe bu alanı doldurabilirsin: örneğin bir film
+            listesi, hava durumu uygulaması veya mini oyunlar.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Yazılarım</h2>
+          <p class="section-description">
+            Aşağıdaki listede backend üzerinden gelen blog yazıların görünüyor.
+          </p>
+        </div>
+        <div class="blog-controls">
+          <input type="text" id="searchInput" placeholder="Yazı ara..." />
+          <select id="sortBy">
+            <option value="newest">En Yeni</option>
+            <option value="oldest">En Eski</option>
+            <option value="titleAsc">Başlığa Göre (A-Z)</option>
+          </select>
+          <button id="newPostBtn" class="btn btn-primary">Yeni Yazı</button>
+        </div>
+      </div>
+
+      <div id="posts" class="posts-grid"></div>
+
+      <div class="pagination">
+        <button id="prevBtn" class="pagination-btn">← Önceki</button>
+        <span id="pageInfo">Sayfa 1</span>
+        <button id="nextBtn" class="pagination-btn">Sonraki →</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">İletişim</h2>
+      <p class="section-description">
+        Buraya e-posta adresini veya sosyal medya linklerini ekleyebilirsin.
+        Şimdilik sadece örnek bir metin bıraktım.
+      </p>
+      <div class="contact-box">
+        <p>
+          Bana ulaşmak için e-posta: <span>ornek@mail.com</span> <br />
+          (Bu kısmı kendi adresinle güncelleyebilirsin.)
+        </p>
+      </div>
+    </section>
   </main>
 
+  <!-- NEW POST MODAL -->
   <div id="modal" class="modal hidden">
     <div class="modal-content">
       <span class="close">&times;</span>
