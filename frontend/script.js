@@ -1,4 +1,4 @@
-const API_URL = 'site-production-c50d.up.railway.app';
+const API_URL = 'https://site-production-c50d.up.railway.app/api';
 
 // DOM Elements
 const postsDiv = document.getElementById('posts');
