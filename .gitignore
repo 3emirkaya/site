@@ -1,0 +1,40 @@
+############################
+# Node / Backend
+############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+log.txt
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+############################
+# Build / Dist (ileride eklenirse)
+############################
+dist/
+build/
+coverage/
+
+
