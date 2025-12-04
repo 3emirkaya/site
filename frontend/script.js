@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'site-production-c50d.up.railway.app';
 
 // DOM Elements
 const postsDiv = document.getElementById('posts');
