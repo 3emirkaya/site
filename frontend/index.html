@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>My Blog</h1>
+      <div class="nav-right">
+        <input type="text" id="searchInput" placeholder="Yazı ara...">
+        <button id="newPostBtn">Yeni Yazı</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="filters">
+      <select id="sortBy">
+        <option value="newest">En Yeni</option>
+        <option value="oldest">En Eski</option>
+        <option value="titleAsc">Başlığa Göre (A-Z)</option>
+      </select>
+    </div>
+    <div id="posts" class="posts-grid"></div>
+    <div class="pagination">
+      <button id="prevBtn" class="pagination-btn">← Önceki</button>
+      <span id="pageInfo">Sayfa 1</span>
+      <button id="nextBtn" class="pagination-btn">Sonraki →</button>
+    </div>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Yeni Yazı Oluştur</h2>
+      <form id="postForm">
+        <input type="text" id="title" placeholder="Yazı Başlığı" required>
+        <textarea id="content" placeholder="Yazı İçeriği" rows="5" required></textarea>
+        <input type="text" id="author" placeholder="Adınız" required>
+        <button type="submit">Yayınla</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
