@@ -2,12 +2,16 @@ export default function About() {
   return (
     <section id="about" className="section container">
       <h2 className="section-title">Hakkımda</h2>
-      <p className="section-description">
-        Buraya kendinle ilgili birkaç paragraf yazabilirsin. Şimdilik örnek bir yazı bıraktım:
-        yazılım öğrenirken yaptığın projeleri, ilgi alanlarını ve gelecekte hangi alanda
-        uzmanlaşmak istediğini anlat.
-      </p>
+      <div className="section-description">
+        <p style={{ marginBottom: '24px' }}>
+          Frontend ağırlıklı olarak çalışıyorum ve modern web teknolojileriyle arayüzler geliştiriyorum.
+          Yazılım geliştirme sürecinde öğrendiklerimi ve deneyimlerimi blog yazıları aracılığıyla paylaşıyorum.
+        </p>
+        <p>
+          Bu sayfada yaptığım projeleri, ilgi alanlarımı ve gelecek planlarımı bulabilirsiniz.
+          Ayrıca blog bölümünde teknik yazılar ve öğrenme serüvenime dair notlar paylaşıyorum.
+        </p>
+      </div>
     </section>
   )
 }
-
